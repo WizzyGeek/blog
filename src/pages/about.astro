@@ -1,0 +1,49 @@
+---
+import '../styles/reset.css'
+
+const me = {
+    username: "WizzyGeek",
+    items: [
+        "math", "code", "gym"
+    ],
+    based: false
+}
+
+const myFavColor = "#2211aa"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>WizzyGeek's Blog</title>
+        <style define:vars={{myFavColor, alias_fav: myFavColor, 'alias-kebab': myFavColor}}>
+            h1 {
+                color: var(--alias-kebab);
+            }
+        </style>
+	</head>
+	<body>
+		<h1>About my Blog</h1>
+        <h2>Who am I?</h2>
+        <p>I am {me.username}, A math, code and fitness guy</p>
+        <p>I like money</p>
+        <h2>Other Stuff I like</h2>
+        <ol>
+            {
+                me.items.map((x) => <li>{x}</li>)
+            }
+        </ol>
+
+        {!me.based && <p>
+            I am so big brain
+        </p>}
+
+        <h2>Other</h2>
+        <ul>
+            <li><a href="/learning/astromd">MD in Astro</a></li>
+        </ul>
+	</body>
+</html>
