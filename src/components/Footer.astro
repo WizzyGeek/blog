@@ -1,0 +1,19 @@
+---
+import Social from './Social.astro';
+
+const github = "https://github.com/WizzyGeek";
+---
+
+<footer>
+    <p>Made with {`<3`} by <Social url={github} name="WizzyGeek"/></p>
+</footer>
+
+<style>
+    footer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 2px solid rgb(31, 32, 37);
+    }
+</style>

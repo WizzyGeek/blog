@@ -1,5 +1,7 @@
 ---
-import '../styles/reset.css'
+import '../styles/reset.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="en">
@@ -12,8 +14,8 @@ import '../styles/reset.css'
 	</head>
 	<body>
 		<h1>My Blog</h1>
+		<Navigation />
 
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
+		<Footer />
 	</body>
 </html>
